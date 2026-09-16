@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 
-type IconName = "wallet" | "car" | "home" | "education" | "business" | "card";
+type IconName =
+  | "wallet"
+  | "car"
+  | "home"
+  | "education"
+  | "business"
+  | "card"
+  | "check";
 
 const paths: Record<IconName, ReactNode> = {
   wallet: (
@@ -38,6 +45,7 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M2 7h20v10H2zM2 11h20M6 15h4" />
     </>
   ),
+  check: <path d="m20 6-11 11-5-5" />,
 };
 
 export default function Icon({ name }: { name: IconName }) {

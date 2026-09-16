@@ -493,6 +493,9 @@ section {
   font-size: 12.5px;
 }
 .toast {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   position: fixed;
   bottom: 24px;
   left: 50%;
@@ -503,6 +506,16 @@ section {
   background: var(--ink);
   box-shadow: var(--shadow-lg);
   transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.toast.visible {
+  opacity: 1;
+}
+.toast svg {
+  width: 18px;
+  height: 18px;
 }
 .site-footer {
   margin-top: 40px;
