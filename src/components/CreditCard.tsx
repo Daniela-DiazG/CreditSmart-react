@@ -3,7 +3,7 @@ import type { Credit } from "../data/credits";
 import Icon from "./Icons";
 import RateDial from "./RateDial";
 
-export default function CreditCard({ credit }: { credit: Credit }) {
+export default function CreditCard({ credit, showSimulator = true }: { credit: Credit; showSimulator?: boolean }) {
   return (
     <article className="credit-card">
       <div className="credit-card-top">
@@ -36,9 +36,9 @@ export default function CreditCard({ credit }: { credit: Credit }) {
         <Link to="/solicitar" className="btn btn-primary btn-sm btn-block">
           Solicitar
         </Link>
-        <Link to="/simulador" className="btn btn-ghost btn-sm">
+        {showSimulator && <Link to="/simulador" className="btn btn-ghost btn-sm">
           Simular
-        </Link>
+        </Link>}
       </div>
     </article>
   );
